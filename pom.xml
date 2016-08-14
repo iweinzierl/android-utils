@@ -1,22 +1,24 @@
-<project
-        xmlns="http://maven.apache.org/POM/4.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <name>${project.groupId}:${project.artifactId}</name>
 
     <groupId>com.github.iweinzierl</groupId>
     <artifactId>android-utils</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <url>https://github.com/iweinzierl/android-utils</url>
-    <description>Library that provides some nice to have utilities when developing Android applications.</description>
+    <description>Library that provides some nice to have utilities when developing Android
+        applications.
+    </description>
 
     <scm>
         <connection>scm:git:https://github.com/iweinzierl/android-utils.git</connection>
-        <developerConnection>scm:git:https://github.com/iweinzierl/android-utils.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/iweinzierl/android-utils.git
+        </developerConnection>
         <url>https://github.com/iweinzierl/android-utils</url>
         <tag>android-utils-${project.version}</tag>
     </scm>
@@ -84,26 +86,26 @@
         <profile>
             <id>ossrh</id>
             <activation>
-              <property>
-                <name>performRelease</name>
-                <value>true</value>
-              </property>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
             </activation>
             <build>
                 <plugins>
                     <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-gpg-plugin</artifactId>
-                      <version>1.5</version>
-                      <executions>
-                          <execution>
-                              <id>sign-artifacts</id>
-                              <phase>verify</phase>
-                              <goals>
-                                  <goal>sign</goal>
-                              </goals>
-                          </execution>
-                      </executions>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
